@@ -7,7 +7,7 @@ router.get("/notes", (req, res) => {
     .getNotes()
     .then(notes => res.json(notes))
     .catch(err => res.status(500).json(err));
-    // will utilize the getNMotes() function
+    // Utilize the getNMotes() function
 })
 
 router.post("/notes/:id", (req, res) => {
@@ -17,16 +17,15 @@ router.post("/notes/:id", (req, res) => {
     .then(notes => res.json(notes))
     .catch(err => res.status(500).json(err));
     
-    // will utilize the addNotes() function
+    // Utilize the addNotes() function
 })
 
 router.delete("/notes/:id", (req, res) => {
-    // this is the delete route where you will
     store
         .removeNote(req.params.id)
         .then(() => res.json({ok:true}))
         .catch(err => res.status(500).json(err))
-    // utilize the removeNote() function
+    // Utilize the removeNote() function
 });
 
  
