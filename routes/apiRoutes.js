@@ -13,7 +13,7 @@ router.get("/notes", (req, res) => {
 router.post("/notes/:id", (req, res) => {
     // this is the POST route where your will you 
     store
-    .addNote()
+    .addNote(req.body)
     .then(notes => res.json(notes))
     .catch(err => res.status(500).json(err));
     
