@@ -30,20 +30,16 @@ class Store {
   getNotes() {
 
     return this.read().then((notes) => {
-
-        // here you will write a function that uses the above read function and parses the notes from the file 
-
       let parsedNotes;
-
-​
+       try {
+         parsedNotes = [].concat(JSON.parse(notes))
+       }
+       catch (err) {
+         parsedNotes = [];
+       }
+       return parsedNotes;
 
       // If notes isn't an array or can't be turned into one, send back a new empty array
-
-     
-
-​
-
-      return parsedNotes;
 
     })
 
