@@ -42,37 +42,30 @@ class Store {
       // If notes isn't an array or can't be turned into one, send back a new empty array
 
     })
-
     
-
   }
-
 ​
 
   addNote(note) {
-
-    // set up variables with our notes data here
-
-​
-    // Error handle here, if we have no title or text added throw a new error explaining what is wrong
+    const {title, text} = note;
 
     if (!title || !text) {
 
-      throw new Error("Note 'title' and 'text' cannot be blank");
+      throw new Error("Note: 'title' or 'text' required");
 
     }
 
-​    // Add a unique id to the note using uuid package
-
-​
+    const newNote = {title, text, id: ++this.lastId};
+    return this.getNotes()
+    .then(notes => [...notes, newNote])
+    .then(revisedNotes => this.write(revisedNotes))
+    .then( () => newNote);
+​    
     // Get all notes, add the new note, write all the updated notes, return the newNote
-
-  
 
   }
 
 ​
-
   removeNote(id) {
       return this.getNotes()
           .then(notes=> notes.filter(note=> note.id !== parseInt(id)))
@@ -84,7 +77,6 @@ class Store {
   }
 
 }
-
 ​
 
 module.exports = new Store();
