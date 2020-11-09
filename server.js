@@ -1,6 +1,3 @@
-// This will be your standard server.js file where you
-
-// will initialize the server 
 const express = require("express");
 const apiRoutes = require("./routes/apiRoutes");
 const htmlRoutes = require("./routes/htmlRoutes");
