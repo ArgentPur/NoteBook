@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const store = require("../db/store")
+const store = require("../db/store");
 
 
 router.get("/notes", (req, res) => {
@@ -10,11 +10,11 @@ router.get("/notes", (req, res) => {
     // Utilize the getNMotes() function
 })
 
-router.post("/notes/:id", (req, res) => {
+router.post("/notes", (req, res) => {
     // this is the POST route where your will you 
     store
     .addNote(req.body)
-    .then(notes => res.json(notes))
+    .then((note) => res.json(note))
     .catch(err => res.status(500).json(err));
     
     // Utilize the addNotes() function
@@ -28,4 +28,4 @@ router.delete("/notes/:id", (req, res) => {
     // Utilize the removeNote() function
 });
 
- 
+ module.exports = router;
