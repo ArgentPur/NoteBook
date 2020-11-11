@@ -6,10 +6,7 @@ Application for writing, reading and removing notes.
 
 ## Use
 
-<img src = getStarted.PNG>
-
-<img scr = saveNote.PNG>
-<img scr = deleteNote.PNG>
+<img src = overview.PNG>
 
 
 ##
