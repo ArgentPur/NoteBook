@@ -11,6 +11,11 @@ Application for writing, reading and removing notes.
 
 
 ### Adding a Note:
-<p> To add a new note, you must first provide input to both the title field in the center of the page with default text "Note Title" as well as the text field beneath with the default text "Note text". Once each field has input, the save button will appear in the upper right next to the pencil icon.
+<p> To add a new note, you must first provide input to both the title field in the center of the page with default text "Note Title" as well as the text field beneath with the default text "Note text". Once each field has input, the save button will appear in the upper right next to the pencil icon.</p>
 
 <img src = saveNote.PNG>
+
+### Reviewing and Deleting Entries
+<p> To read existing entries, simply select any entry from the list on the left side of the screen and the entry will be displayed in the main text area. To delete an entry, click the red trash icon on the right side of the list item entry you would like to remove.</p>
+
+<img src = deleteNote.PNG>
